@@ -9,11 +9,11 @@
 
 :root {
     --m-color: hsl(47, 88%, 63%);
-    font-family: 'Figtree';
 }
 
 body {
     background-color: var(--m-color);
+    font-family: 'Figtree';
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,12 +21,13 @@ body {
 }
 
 .card {
-    width: 350px;
+    width: 384px;
+    height: 522px;
     background-color: #fff;
     padding: 1.5em;
-    border-radius: 1em;
+    border-radius: 20px;
     border: 1px solid #000;
-    box-shadow: 15px 10px 0 0 #000;
+    box-shadow: 8px 8px 0 0 #000;
 }
 
 
@@ -36,7 +37,7 @@ body {
     border-radius: inherit;
 }
 
-.card b {
+.card b.keywords {
     background-color: var(--m-color);
     margin-top: 1em;
     display: inline-block;
@@ -44,33 +45,30 @@ body {
     border-radius: 3px;
 }
 
-h2 {
-    font-size: clamp(22px, 2vw, 2em);
+h1 {
+    font-size: clamp(20px, 2vw, 24px);
 }
-h2:hover {
+h1:hover {
     color: var(--m-color);
     cursor: pointer;
 }
-
-h2 + p {
+h1 + p {
     opacity: 0.75;
     line-height: 1.5;
 }
+
 .avatar {
     display: flex;
     align-items: center;
     gap: 1em;
 }
 .avatar img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
 }
 
-
-@media (max-width: 375px) {
+/* meida-query */
+@media (max-width: 480px) {
     .card {
-        width: 90%;
+        width: 327px;
     }
-
-
 }
